@@ -39,8 +39,8 @@ public class Aoc9 {
                             }
                         }
                         else{
-                            if(pairs.get(i).getValue() < pairs.get(j).getValue()){
-                                pairs.set(j,Pair.of(-1,pairs.get(j).getValue() - pairs.get(i).getValue()));
+                            if(val.getValue() < blank.getValue()){
+                                pairs.set(j,Pair.of(-1,blank.getValue() - val.getValue()));
                                 pairs.set(i,Pair.of(-1,val.getValue()));
                                 pairs.add(j,val);
                                 i++;
