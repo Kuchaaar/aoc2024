@@ -33,6 +33,7 @@ public class Aoc10 {
             int c = curr[1];
             if (input.get(r).get(c) == 9) {
                 reachableNine.add(r + "," + c);
+                val++;
             }
             for (int i = 0; i < 4; i++) {
                 int newRow = r + dRow[i];
@@ -40,11 +41,6 @@ public class Aoc10 {
                 if (newRow >= 0 && newRow < input.size() && newCol >= 0 && newCol < input.get(0).size()
                         && input.get(newRow).get(newCol) == input.get(r).get(c) + 1) {
                     queue.offer(new int[]{newRow, newCol});
-                    if (part2) {
-                        if (input.get(newRow).get(newCol) == 9) {
-                            val++;
-                        }
-                    }
                 }
             }
         }
