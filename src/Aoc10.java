@@ -7,8 +7,8 @@ public class Aoc10 {
         this.input = input;
     }
 
-    private static final int[] dRow = {-1, 1, 0, 0};
-    private static final int[] dCol = {0, 0, -1, 1};
+    private final int[] dRow = {-1, 1, 0, 0};
+    private final int[] dCol = {0, 0, -1, 1};
 
     public int part(boolean part2) {
         boolean[][] visited = new boolean[input.size()][input.get(0).size()];
