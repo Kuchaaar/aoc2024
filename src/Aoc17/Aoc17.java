@@ -1,6 +1,5 @@
 package Aoc17;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Aoc17 {
@@ -8,7 +7,6 @@ public class Aoc17 {
     long b;
     long c;
     public List<Integer> programInputs;
-    List<String> output = new ArrayList<>();
 
     public Aoc17(long a, long b, long c, List<Integer> programInputs) {
         this.a = a;
@@ -29,7 +27,7 @@ public class Aoc17 {
             for (newA <<= 3; ; newA++) {
                 Program pg = new Program(newA, b, c, programInputs);
                 pg.execute();
-                if(pg.output.size() >= i+1) {
+                if (pg.output.size() >= i + 1) {
                     if (checkSlicesEqual(pg.output, i)) {
                         break;
                     }
