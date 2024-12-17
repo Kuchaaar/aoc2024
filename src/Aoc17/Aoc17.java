@@ -26,11 +26,13 @@ public class Aoc17 {
     public String part2() {
         long newA = 0L;
         for (int i = 0; i < programInputs.size(); i++) {
-            for (newA <<= 3; ; ++newA) {
+            for (newA <<= 3; ; newA++) {
                 Program pg = new Program(newA, b, c, programInputs);
                 pg.execute();
-                if (checkSlicesEqual(pg.output, i)) {
-                    break;
+                if(pg.output.size() >= i+1) {
+                    if (checkSlicesEqual(pg.output, i)) {
+                        break;
+                    }
                 }
             }
         }
